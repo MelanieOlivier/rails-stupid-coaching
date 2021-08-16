@@ -9,7 +9,19 @@
   </head>
 
   <body>
-  <h1>Stupid coach</h1>
-  <p><%= @answer %></p>
+  <h1>Stupid coaching</h1>
+  <div class="my_question">
+    <p><%= params[:question] %></p>
+    <p class="text-italic"><%= "- You" %></p>
+  </div>
+
+  <div class="coach_answer">
+    <p><%= @answer %></p>
+    <p class="text-italic"><%= "- Your coach" %></p>
+  </div>
+
+  <div class="link">
+    <%= link_to "Ask a new question", ask_path %>
+  </div>
   </body>
 </html>
